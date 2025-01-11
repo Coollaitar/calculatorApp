@@ -79,3 +79,8 @@ This is a modern and elegant calculator mobile application built using _React Na
 - Author: Aadit Kisanrao Palande
 - Email: aadit2002nov@gmail.com
 - GitHub: https://github.com/Coollaitar
+
+### ⚡ Image:
+
+![image](./assets/images/image.png)
+![QRCode](./assets/images/QR.png)

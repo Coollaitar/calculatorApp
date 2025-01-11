@@ -24,15 +24,7 @@ const CalculatorButton: React.FC<ButtonProps> = React.memo(
       onPress={onPress}
       activeOpacity={0.7}
     >
-      <Text
-        style={[
-          styles.buttonText,
-          style?.backgroundColor === '#1B998B' && styles.equalButtonText,
-          style?.backgroundColor === '#2D3047' && styles.operatorButtonText,
-        ]}
-      >
-        {title}
-      </Text>
+      <Text style={styles.buttonText}>{title}</Text>
     </TouchableOpacity>
   )
 );
@@ -173,6 +165,11 @@ const Calculator: React.FC = () => {
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle='light-content' />
       <View style={styles.displayContainer}>
+        <Text style={styles.displayText} numberOfLines={1} adjustsFontSizeToFit>
+          {previousValue !== null && operator
+            ? `${previousValue} ${operator}`
+            : ''}
+        </Text>
         <Text style={styles.displayText} numberOfLines={1} adjustsFontSizeToFit>
           {display}
         </Text>
